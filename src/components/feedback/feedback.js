@@ -20,5 +20,7 @@ const FeedbackOptions = ({ clickGood, clickNeutral, clickBad }) => {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  onLeaveFeedback: PropTypes.func.isRequired,
+  clickGood: PropTypes.func,
+  clickNeutral: PropTypes.func,
+  clickBad: PropTypes.func,
 };

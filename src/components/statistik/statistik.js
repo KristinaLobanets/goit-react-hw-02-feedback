@@ -1,12 +1,6 @@
 import React from "react";
 
-const Statistik = ({
-  good,
-  neutral,
-  bad,
-  countTotalFeedback,
-  countPositiveFeedbackPercentage,
-}) => {
+const Statistik = ({ good, neutral, bad, countTotal, countPercentage }) => {
   return (
     <div>
       <h2>Statistics</h2>
@@ -23,14 +17,14 @@ const Statistik = ({
           <span>Bad: </span>
           {bad}
         </p>
-        {/* <p>
+        <p>
           <span>Total: </span>
-          {countTotalFeedback()}
-        </p> */}
-        {/* <p>
+          {countTotal}
+        </p>
+        <p>
           <span>Positive feedback: </span>
-          {countPositiveFeedbackPercentage()}%
-        </p> */}
+          {countPercentage}%
+        </p>
       </div>
     </div>
   );

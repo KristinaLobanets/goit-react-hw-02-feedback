@@ -17,6 +17,7 @@ class App extends Component {
   clickGood = (good) => {
     return good + 1;
   };
+
   clickNeutral = (neutral) => {
     return neutral + 1;
   };
