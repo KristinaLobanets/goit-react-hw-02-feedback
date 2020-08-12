@@ -11,20 +11,25 @@ class App extends Component {
     bad: 0,
   };
 
-  clickGood = () =>
+  onClick = (type) =>
     this.setState((preState) => ({
-      good: preState.good + 1,
+      [type]: preState[type] + 1,
     }));
 
-  clickNeutral = () =>
-    this.setState((preState) => ({
-      neutral: preState.neutral + 1,
-    }));
+  // clickGood = () =>
+  //   this.setState((preState) => ({
+  //     good: preState.good + 1,
+  //   }));
 
-  clickBad = () =>
-    this.setState((preState) => ({
-      bad: preState.bad + 1,
-    }));
+  // clickNeutral = () =>
+  //   this.setState((preState) => ({
+  //     neutral: preState.neutral + 1,
+  //   }));
+
+  // clickBad = () =>
+  //   this.setState((preState) => ({
+  //     bad: preState.bad + 1,
+  //   }));
 
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
@@ -44,9 +49,10 @@ class App extends Component {
       <>
         <Title />
         <FeedbackOptions
-          clickGood={this.clickGood}
-          clickNeutral={this.clickNeutral}
-          clickBad={this.clickBad}
+          onClick={this.onClick}
+          // clickGood={this.clickGood}
+          // clickNeutral={this.clickNeutral}
+          // clickBad={this.clickBad}
         />
         {this.countTotalFeedback() > 0 ? (
           <Statistik
