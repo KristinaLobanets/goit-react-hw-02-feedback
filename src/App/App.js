@@ -3,7 +3,7 @@ import Title from "../components/titlle/title";
 import FeedbackOptions from "../components/feedback/feedback";
 import Statistik from "../components/statistik/statistik";
 import Notification from "../components/Notification/Notification";
-
+import PropTypes from "prop-types";
 class App extends Component {
   state = {
     good: 0,
@@ -70,3 +70,9 @@ class App extends Component {
   }
 }
 export default App;
+
+App.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+};
